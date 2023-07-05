@@ -1,0 +1,21 @@
+:root {
+    --text-primary: #FF474D;
+    --text-secondary: #5C5C5C;
+    --text-main: #212121;
+    --text-white: #FFFFFF;
+    --text-placeholder: #BDBDBD;
+    --input: #F3F4F5;
+    --bg-grey: #f6f6f6;
+    --bg-black: #363636;
+    --radial-grey-15per: radial-gradient(#DADADA 15%, #FAFAFA 100%);
+    --radial-grey-20per: radial-gradient(#FFFFFF 20%, #FAFAFA 100%);
+    --radial-white-60per: radial-gradient(#FFFFFF 60%, #FAFAFA 100%);
+    --radial-white-50per: radial-gradient(#F6F5F5 50%, #FAFAFA 100%);
+    --diamond-visual: #FB242B;
+    --diamond-visual-60per: #FB242B99;
+    --diamond-black-bg: radial-gradient(#6D6D6D, #FAFAFA);
+    --btn-primary: #FF474D;
+    --btn-secondary: #FFFFFF;
+    --btn-two: #212121;
+    --shadow: #2121211A;
+}
