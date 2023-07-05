@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "DOM",
+  "extends": "./tsconfig.paths.json",
+  "compilerOptions": {
+    "lib": ["ES6", "DOM", "DOM.Iterable"],
+    "module": "commonjs",
+    "target": "ES6",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noErrorTruncation": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "outDir": "dist"
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": [
+    "node_modules/**/*",
+    ".vscode/**/*"
+  ],
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+}
+}
