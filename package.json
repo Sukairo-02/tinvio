@@ -1,0 +1,22 @@
+{
+  "name": "tinvio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Sukairo-02/tinvio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sukairo-02/tinvio/issues"
+  },
+  "homepage": "https://github.com/Sukairo-02/tinvio#readme",
+  "devDependencies": {
+    "scss": "^0.2.4"
+  }
+}
