@@ -1,34 +1,25 @@
 {
 	"name": "tinvio",
-	"version": "1.0.0",
-	"description": "",
-	"main": "pages/index.html",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
 	"scripts": {
-		"build": "webpack"
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+ssh://git@github.com/Sukairo-02/tinvio.git"
 	},
-	"author": "",
-	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/Sukairo-02/tinvio/issues"
 	},
 	"homepage": "https://github.com/Sukairo-02/tinvio#readme",
 	"devDependencies": {
-		"cross-env": "^7.0.3",
-		"css-loader": "^6.8.1",
-		"fork-ts-checker-webpack-plugin": "^8.0.0",
-		"mini-css-extract-plugin": "^2.7.6",
-		"node-sass": "^9.0.0",
-		"sass-loader": "^13.3.2",
-		"scss": "^0.2.4",
-		"style-loader": "^3.3.3",
-		"ts-loader": "^9.4.4",
-		"tsconfig-paths-webpack-plugin": "^4.0.1",
-		"typescript": "^5.1.6",
-		"webpack": "^5.88.1",
-		"webpack-cli": "^5.1.4"
+		"@types/node": "^20.4.2",
+		"sass": "^1.63.6",
+		"typescript": "^5.0.2",
+		"vite": "^4.4.0"
 	}
 }

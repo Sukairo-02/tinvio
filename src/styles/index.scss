@@ -14,7 +14,7 @@ html {
 
 .stylishtext {
     color: var(--text-primary);
-    & :active {
+    &:hover {
         background-color: var(--text-secondary)
     }
 }
