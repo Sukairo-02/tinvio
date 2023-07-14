@@ -1,20 +1,22 @@
-@import '@styles/nullify.scss';
-@import '@styles/variables.scss';
+@import '@styles/global/';
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* font-family */
+header {
 }
 
-html {
-    scroll-behavior: smooth;
+.header__container {
 }
 
-.stylishtext {
-    color: var(--text-primary);
-    &:hover {
-        background-color: var(--text-secondary)
-    }
+.header__desktopContent {
+}
+
+.header__mobileContent {
+}
+
+.header__mobileNav {
+}
+
+main {
+}
+
+footer {
 }

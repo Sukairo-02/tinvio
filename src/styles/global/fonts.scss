@@ -1,0 +1,185 @@
+@use '@styles/global/variables.scss';
+
+@font-face {
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: 400;
+	font-display: block;
+	src: url(/fonts/Gilroy-Regular.woff2) format('woff2'), url(/fonts/Gilroy-Regular.woff) format('woff');
+}
+
+@font-face {
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: 500;
+	font-display: block;
+	src: url(/fonts/Gilroy-Medium.woff2) format('woff2'), url(/fonts/Gilroy-Medium.woff) format('woff');
+}
+
+@font-face {
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: 600;
+	font-display: block;
+	src: url(/fonts/Gilroy-SemiBold.woff2) format('woff2'), url(/fonts/Gilroy-SemiBold.woff) format('woff');
+}
+
+@font-face {
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: 700;
+	font-display: block;
+	src: url(/fonts/Gilroy-Bold.woff2) format('woff2'), url(/fonts/Gilroy-Bold.woff) format('woff');
+}
+
+@font-face {
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 400;
+	font-display: block;
+	src: url(/fonts/Inter-Regular.woff2) format('woff2'), url(/fonts/Inter-Regular.woff) format('woff');
+}
+
+%font__title_1 {
+	color: var(--text-main);
+	font-family: Gilroy;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 59px;
+}
+
+%font__title_2 {
+	color: var(--text-main);
+	font-family: Gilroy;
+	font-size: 44px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 54px;
+}
+
+%font__title_3 {
+	color: var(--text-main);
+	font-family: Gilroy;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 44px;
+}
+
+%font__title_4 {
+	color: var(--text-main);
+	font-family: Gilroy;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 39px;
+}
+
+%font__title_5 {
+	color: var(--text-main);
+	font-family: Gilroy;
+	font-size: 28px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 34px;
+}
+
+%font__subtitle_1 {
+	color: var(--text-main);
+	font-family: Gilroy;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 29px;
+}
+
+%font__subtitle_2 {
+	color: var(--text-main);
+	font-family: Gilroy;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 29px;
+}
+
+%font__description {
+	color: var(--text-main);
+	font-family: Gilroy;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+%font__button_main {
+	color: var(--text-main);
+	font-family: Gilroy;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 20px;
+}
+
+%font__button_headerTabs {
+	color: var(--text-main);
+	font-family: Gilroy;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 19px;
+}
+
+%font__button_headerButton {
+	color: var(--text-main);
+	font-family: Gilroy;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 17px;
+}
+
+%font__text_body1 {
+	color: var(--text-main);
+	font-family: Inter;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+%font__text_body2 {
+	color: var(--text-main);
+	font-family: Inter;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 23px;
+}
+
+%font__text_placeholder {
+	color: var(--text-main);
+	font-family: Inter;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 17px;
+}
+
+%font__text_tabs {
+	color: var(--text-main);
+	font-family: Inter;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 17px;
+}
+
+%font__text_error {
+	color: var(--text-main);
+	font-family: Inter;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 15px;
+}

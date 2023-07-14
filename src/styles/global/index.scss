@@ -1,0 +1,160 @@
+@import '@styles/global/nullify.scss';
+@import '@styles/global/variables.scss';
+@import '@styles/global/fonts.scss';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	@extend %font__text_body1;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.body__tab {
+	@extend %font__text_tabs;
+	display: flex;
+	padding: 11px 34px 12px 34px;
+	border-radius: 8px;
+	background: var(--input);
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	cursor: pointer;
+
+	&_selected {
+		@extend .body__tab;
+		border-radius: 8px;
+		border: 1px solid var(--buttons-text-button-2, var(--btn-two));
+	}
+}
+
+.header__tab {
+	@extend %font__button_headerButton;
+	cursor: pointer;
+
+	:hover {
+		color: var(--text-primary);
+	}
+
+	&_selected {
+		@extend .header__tab, :hover;
+	}
+}
+
+.button_red {
+	@extend %font__button_main;
+	color: var(--text-white);
+	padding: 14px 32px;
+	border-radius: 16px;
+	background-color: var(--btn-primary);
+	flex-shrink: 0;
+	cursor: pointer;
+
+	:hover {
+		background-color: var(--btn-primary-alternative);
+	}
+
+	:active {
+		background-color: var(--btn-primary-alternative);
+	}
+}
+
+.button_white {
+	@extend %font__button_headerButton;
+	padding: 10px 16px;
+	border-radius: 16px;
+	background-color: var(--btn-secondary);
+	flex-shrink: 0;
+	cursor: pointer;
+
+	:hover {
+		background-color: var(--btn-secondary-alternative);
+	}
+
+	:active {
+		background-color: var(--btn-secondary-alternative);
+	}
+}
+
+.header__button {
+	@extend .button_white, :hover, :active;
+	transition: all 0.3s ease 0s;
+
+	&_postScroll {
+		@extend .header__button, :hover, :active;
+		color: var(--text-white);
+		background-color: var(--btn-primary);
+
+		:hover {
+			background-color: var(--btn-primary-alternative);
+		}
+
+		:active {
+			background-color: var(--btn-primary-alternative);
+		}
+	}
+}
+
+.button_swiper {
+	width: 40px;
+	height: 40px;
+	flex-shrink: 0;
+	cursor: pointer;
+
+	:hover {
+		opacity: 0.7;
+	}
+
+	:active {
+		opacity: 0.7;
+	}
+}
+
+.input {
+	@extend %font__text_body1;
+	background-color: var(--input);
+	display: flex;
+	padding: 11px 0px 12px 16px;
+	width: 329px;
+	height: 40px;
+	border-radius: 8px;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+	cursor: text;
+
+	::placeholder {
+		color: var(--text-placeholder);
+	}
+
+	:focus {
+		border: 1px solid var(--input-border);
+	}
+
+	:disabled {
+		cursor: not-allowed;
+	}
+
+	:invalid {
+		border: 1px solid var(--error);
+	}
+
+	&__errorMessage {
+		@extend %font__text_error;
+		color: var(--error);
+		text-align: right;
+		right: 0;
+		bottom: -17px;
+		position: absolute;
+	}
+}
