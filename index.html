@@ -2,13 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tinvio</title>
   </head>
   <body>
-    <div class="stylishtext">Goodbye, world</div>
-    
-    <script type="module" src="/src/main.ts"></script>
+    <div class="body__wrapper">
+      <div class="background"></div>
+      <header>
+        <div class="header__container">
+          <div class="header__desktopContent"></div>
+          <div class="header__mobileContent"></div>
+          <div class="header__mobileNav"></div>
+        </div>
+      </header>
+      <main>Goodbye, world!</main>
+      <footer></footer>
+    </div>
+
+    <script type="module" src="/src/index.ts"></script>
   </body>
 </html>
