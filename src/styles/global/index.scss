@@ -14,6 +14,7 @@ a {
 
 body {
 	@extend %font__text_body1;
+	background-color: var(--bg-grey);
 }
 
 html {
@@ -39,10 +40,11 @@ html {
 }
 
 .header__tab {
-	@extend %font__button_headerButton;
+	@extend %font__button_headerTabs;
+	transition: color 0.3s ease 0s;
 	cursor: pointer;
 
-	:hover {
+	&:hover {
 		color: var(--text-primary);
 	}
 
@@ -54,52 +56,58 @@ html {
 .button_red {
 	@extend %font__button_main;
 	color: var(--text-white);
-	padding: 14px 32px;
+	padding: 14px 0px;
 	border-radius: 16px;
 	background-color: var(--btn-primary);
 	flex-shrink: 0;
+	width: 188px;
+	height: 48px;
+	text-align: center;
 	cursor: pointer;
 
-	:hover {
+	&:hover {
 		background-color: var(--btn-primary-alternative);
 	}
 
-	:active {
+	&:active {
 		background-color: var(--btn-primary-alternative);
 	}
 }
 
 .button_white {
 	@extend %font__button_headerButton;
-	padding: 10px 16px;
+	padding: 10px 0px;
 	border-radius: 16px;
 	background-color: var(--btn-secondary);
 	flex-shrink: 0;
+	width: 130px;
+	height: 40px;
+	text-align: center;
+	transition: font, color, background-color 0.3s ease 0s;
 	cursor: pointer;
 
-	:hover {
+	&:hover {
 		background-color: var(--btn-secondary-alternative);
 	}
 
-	:active {
+	&:active {
 		background-color: var(--btn-secondary-alternative);
 	}
 }
 
 .header__button {
-	@extend .button_white, :hover, :active;
-	transition: all 0.3s ease 0s;
+	@extend .button_white;
 
 	&_postScroll {
-		@extend .header__button, :hover, :active;
+		@extend .header__button;
 		color: var(--text-white);
 		background-color: var(--btn-primary);
 
-		:hover {
+		&:hover {
 			background-color: var(--btn-primary-alternative);
 		}
 
-		:active {
+		&:active {
 			background-color: var(--btn-primary-alternative);
 		}
 	}
@@ -111,11 +119,11 @@ html {
 	flex-shrink: 0;
 	cursor: pointer;
 
-	:hover {
+	&:hover {
 		opacity: 0.7;
 	}
 
-	:active {
+	&:active {
 		opacity: 0.7;
 	}
 }
@@ -124,7 +132,7 @@ html {
 	@extend %font__text_body1;
 	background-color: var(--input);
 	display: flex;
-	padding: 11px 0px 12px 16px;
+	padding: 11px 16px 12px 16px;
 	width: 329px;
 	height: 40px;
 	border-radius: 8px;
@@ -133,19 +141,19 @@ html {
 	flex-shrink: 0;
 	cursor: text;
 
-	::placeholder {
+	&::placeholder {
 		color: var(--text-placeholder);
 	}
 
-	:focus {
+	&:focus {
 		border: 1px solid var(--input-border);
 	}
 
-	:disabled {
+	&:disabled {
 		cursor: not-allowed;
 	}
 
-	:invalid {
+	&:invalid {
 		border: 1px solid var(--error);
 	}
 

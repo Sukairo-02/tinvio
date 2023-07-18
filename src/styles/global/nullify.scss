@@ -57,3 +57,12 @@ textarea,
 select {
 	font: inherit;
 }
+
+button {
+	border: transparent;
+}
+
+svg:not(:root) {
+	overflow-clip-margin: content-box;
+	overflow: hidden;
+}

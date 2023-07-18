@@ -1,21 +1,77 @@
 @import '@styles/global/';
 
 header {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: auto;
+	padding: 24px 0px;
+	z-index: 1000;
+	width: 100%;
 }
 
 .header__container {
+	top: 0px;
+	left: 0px;
+	display: flex;
+	max-width: 1312px;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0px auto;
+
+	@media screen and (min-width: 1440px) {
+		max-width: 1192px;
+	}
 }
 
-.header__desktopContent {
+.header__left {
+	display: flex;
 }
 
-.header__mobileContent {
+.header__logoWrapper {
+	height: 43.55px;
+	cursor: pointer;
 }
 
-.header__mobileNav {
+.header__center {
+	display: flex;
+	justify-content: center;
+}
+
+.header__right {
+	display: block;
+}
+
+.header__navButton {
+	display: none;
+	&_postClick {
+	}
+}
+
+.header__mobileModal {
+	display: none;
+}
+
+.header__tabs {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: relative;
+}
+
+.header__tab {
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	margin-right: 72px;
+}
+
+.header__langSelector {
+	padding-left: 16px;
 }
 
 main {
+	margin-top: 80px;
 }
 
 footer {
