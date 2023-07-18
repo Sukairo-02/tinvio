@@ -76,7 +76,7 @@ html {
 
 .button_white {
 	@extend %font__button_headerButton;
-	padding: 10px 0px;
+	padding: 11px 0px 9px 0px;
 	border-radius: 16px;
 	background-color: var(--btn-secondary);
 	flex-shrink: 0;
