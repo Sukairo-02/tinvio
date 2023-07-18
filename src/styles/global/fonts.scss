@@ -88,7 +88,7 @@
 %font__subtitle_1 {
 	color: var(--text-main);
 	font-family: Gilroy;
-	font-size: 16px;
+	font-size: 24px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 29px;
@@ -97,7 +97,7 @@
 %font__subtitle_2 {
 	color: var(--text-main);
 	font-family: Gilroy;
-	font-size: 16px;
+	font-size: 20px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 29px;
@@ -119,6 +119,15 @@
 	font-style: normal;
 	font-weight: 700;
 	line-height: 20px;
+}
+
+%font__langSelector {
+	color: var(--text-main);
+	font-family: Gilroy;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 26px;
 }
 
 %font__button_headerTabs {

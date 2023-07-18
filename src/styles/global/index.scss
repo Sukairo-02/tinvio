@@ -14,7 +14,8 @@ a {
 
 body {
 	@extend %font__text_body1;
-	background-color: var(--bg-grey);
+	//background-color: #FFFFFF
+	background-color: #e8e8e8; // TEST VALUE
 }
 
 html {
@@ -33,23 +34,8 @@ html {
 	cursor: pointer;
 
 	&_selected {
-		@extend .body__tab;
 		border-radius: 8px;
 		border: 1px solid var(--buttons-text-button-2, var(--btn-two));
-	}
-}
-
-.header__tab {
-	@extend %font__button_headerTabs;
-	transition: color 0.3s ease 0s;
-	cursor: pointer;
-
-	&:hover {
-		color: var(--text-primary);
-	}
-
-	&_selected {
-		@extend .header__tab, :hover;
 	}
 }
 
@@ -95,24 +81,6 @@ html {
 	}
 }
 
-.header__button {
-	@extend .button_white;
-
-	&_postScroll {
-		@extend .header__button;
-		color: var(--text-white);
-		background-color: var(--btn-primary);
-
-		&:hover {
-			background-color: var(--btn-primary-alternative);
-		}
-
-		&:active {
-			background-color: var(--btn-primary-alternative);
-		}
-	}
-}
-
 .button_swiper {
 	width: 40px;
 	height: 40px;
@@ -132,6 +100,7 @@ html {
 	@extend %font__text_body1;
 	background-color: var(--input);
 	display: flex;
+	position: relative;
 	padding: 11px 16px 12px 16px;
 	width: 329px;
 	height: 40px;
