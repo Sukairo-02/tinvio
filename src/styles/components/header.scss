@@ -8,6 +8,8 @@
 	padding: 24px 0px;
 	z-index: 1000;
 	width: 100%;
+	transition: (display, backdrop-filter) 0.3s ease 0s;
+	user-select: none;
 
 	&_postScroll {
 		background: var(--bg-header);
@@ -23,6 +25,7 @@
 	width: 100%;
 	align-items: center;
 	margin: 0px auto;
+	transition: (background-color, backdrop-filter) 0.3s ease 0s;
 
 	@media screen and (min-width: 768px) {
 		max-width: 100%;
@@ -42,11 +45,6 @@
 
 	@media screen and (min-width: 1920px) {
 		max-width: 1320px;
-	}
-
-	&_postScroll {
-		background: rgba(255, 255, 255, 0.9);
-		backdrop-filter: blur(12px);
 	}
 }
 
@@ -93,8 +91,8 @@
 }
 
 .langSelector__popup {
-	position: absolute;
 	display: none;
+	position: absolute;
 	top: 36px;
 	left: -6px;
 	padding: 50px 0px;
@@ -102,7 +100,6 @@
 	background-color: #f3f4f5;
 	border-radius: 8px;
 	box-shadow: rgba(33, 33, 33, 0.1) 4px 4px 16.4664px 0px;
-	transition: display 0.3s ease 0s;
 
 	& > hr {
 		margin: 2px 10px;
@@ -152,6 +149,7 @@
 
 .header__button {
 	@extend .button_white;
+	transition: (font, background-color) 0.3s ease 0s;
 
 	&_postScroll {
 		@extend .header__button;
