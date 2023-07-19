@@ -15,21 +15,24 @@
 		background: var(--bg-header);
 		backdrop-filter: blur(12px);
 	}
+
+	@media screen and (max-width: 768px) {
+		background: var(--bg-header);
+		backdrop-filter: blur(12px);
+	}
 }
 
 .header__container {
 	top: 0px;
 	left: 0px;
 	display: flex;
+	z-index: 1100;
 	justify-content: space-between;
 	width: 100%;
 	align-items: center;
 	margin: 0px auto;
 	transition: (background-color, backdrop-filter) 0.3s ease 0s;
-
-	@media screen and (min-width: 768px) {
-		max-width: 100%;
-	}
+	max-width: 100%;
 
 	@media screen and (min-width: 1024px) {
 		max-width: 952px;
@@ -62,14 +65,14 @@
 
 .header__langSelectorWrapper {
 	position: relative;
-	display: flex;
+	display: none;
 	align-items: center;
 	cursor: pointer;
 	margin-left: 21px;
 	margin-top: 5px;
 
-	@media screen and (max-width: 768px) {
-		display: none;
+	@media screen and (min-width: 1024px) {
+		display: flex;
 	}
 }
 
@@ -135,11 +138,11 @@
 
 .header__center {
 	padding-right: 40px;
-	display: flex;
+	display: none;
 	justify-content: center;
 
-	@media screen and (max-width: 768px) {
-		display: none;
+	@media screen and (min-width: 1024px) {
+		display: flex;
 	}
 }
 
@@ -150,9 +153,9 @@
 .header__button {
 	@extend .button_white;
 	transition: (font, background-color) 0.3s ease 0s;
+	display: none;
 
 	&_postScroll {
-		@extend .header__button;
 		color: var(--text-white);
 		background-color: var(--btn-primary);
 
@@ -165,21 +168,21 @@
 		}
 	}
 
-	@media screen and (max-width: 768px) {
-		display: none;
+	@media screen and (min-width: 1024px) {
+		display: block;
 	}
 }
 
 .header__navButton {
-	display: none;
+	display: block;
 
 	&_postClick {
 		@extend .header__navButton;
 		display: none;
 	}
 
-	@media screen and (max-width: 768px) {
-		display: block;
+	@media screen and (min-width: 1024px) {
+		display: none;
 	}
 }
 
