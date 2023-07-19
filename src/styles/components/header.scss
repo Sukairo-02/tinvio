@@ -28,13 +28,13 @@
 	display: flex;
 	z-index: 1100;
 	justify-content: space-between;
-	width: 100%;
 	align-items: center;
-	margin: 0px auto;
+	margin: 0px 10px;
 	transition: (background-color, backdrop-filter) 0.3s ease 0s;
-	max-width: 100%;
+	// max-width: 97.5%;
 
 	@media screen and (min-width: 1024px) {
+		margin: 0px auto;
 		max-width: 952px;
 	}
 
@@ -70,6 +70,10 @@
 	cursor: pointer;
 	margin-left: 21px;
 	margin-top: 5px;
+
+	&_forceEnable {
+		display: flex;
+	}
 
 	@media screen and (min-width: 1024px) {
 		display: flex;
@@ -175,10 +179,19 @@
 
 .header__navButton {
 	display: block;
+	height: 24px;
+	width: 24px;
+	margin-right: 7px;
+	background-image: url('/public/icons/menuBurger.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
 
-	&_postClick {
-		@extend .header__navButton;
-		display: none;
+	&_activated {
+		height: 20px;
+		width: 20px;
+		margin-right: 6px;
+		background-image: url('/public/icons/menuCross.svg');
 	}
 
 	@media screen and (min-width: 1024px) {
