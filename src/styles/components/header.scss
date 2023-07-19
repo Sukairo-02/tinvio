@@ -190,6 +190,7 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
+	background-color: rgba(255, 255, 255, 0);
 	cursor: pointer;
 
 	&.activated {
@@ -197,7 +198,7 @@
 		width: 24px;
 		margin-right: 6px;
 		background-image: url('/public/icons/menuCross.svg');
-		background-color: #ffffff; // Somehow doesn't change automatically when modal window is called...
+		background-color: rgba(255, 255, 255, 0); // Somehow doesn't change automatically when modal window is called...
 	}
 
 	@media screen and (min-width: 1024px) {
