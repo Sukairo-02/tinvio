@@ -120,10 +120,7 @@
 								<ellipse cx="77.7106" cy="14.3282" rx="1.78874" ry="1.9073" fill="#FF474D" />
 							</svg>
 						</div>
-						<div
-							class="header__langSelectorWrapper header__langSelectorWrapper_forceEnable"
-							id="langSelector"
-						>
+						<div class="header__langSelectorWrapper" id="langSelector">
 							<div class="langSelector__text" id="langSelector__text">en</div>
 							<div class="langSelector__arrow" id="langSelector__arrow">
 								<img src="/icons/langSelectorArrow.svg" />
@@ -141,16 +138,47 @@
 					</div>
 					<nav class="header__center">
 						<ul class="header__tabs">
-							<li class="header__tab header__tab_selected"><a>Home</a></li>
-							<li class="header__tab"><a>Features</a></li>
-							<li class="header__tab"><a>Company</a></li>
+							<li class="selected"><a>Home</a></li>
+							<li><a>Features</a></li>
+							<li><a>Company</a></li>
 						</ul>
 					</nav>
 					<div class="header__right">
 						<button class="header__button">Get Started</button>
-						<div class="header__navButton"></div>
+						<button class="header__modalButton" id="header__modalButton"></button>
 					</div>
-					<div class="header__mobileModal"></div>
+				</div>
+				<div class="header__mobileModal" id="header__mobileModal">
+					<div class="mobileModal__container">
+						<div class="mobileModal__blankSpace"></div>
+						<ul class="mobileModal__tabs">
+							<li class="selected">Home</li>
+							<li>Features</li>
+							<li>Company</li>
+						</ul>
+						<div class="mobileModal__bottom">
+							<button class="mobileModal__button">Get Started</button>
+							<div class="mobileModal__links">
+								<div class="links__smallLinks">
+									<a href="https://linkedin.com/" target="_blank"
+										><img src="/icons/outer_linkedIn.png" alt="LinkedIn"
+									/></a>
+									<a href="https://instagram.com/" target="_blank"
+										><img src="/icons/outer_insta.png" alt="Instagram"
+									/></a>
+								</div>
+								<div class="links__bigLinks">
+									<a href="https://play.google.com/" target="_blank"
+										><img src="/icons/outer_gPlay.png" alt="Google Play"
+									/></a>
+									<a href="https://apps.apple.com/" target="_blank"
+										><img src="/icons/outer_appStore.png" alt="App Store"
+									/></a>
+								</div>
+							</div>
+						</div>
+						<div class="mobileModal__blankSpace_bottom"></div>
+					</div>
 				</div>
 			</header>
 			<main>

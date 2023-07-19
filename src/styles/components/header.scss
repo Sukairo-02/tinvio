@@ -8,15 +8,18 @@
 	padding: 24px 0px;
 	z-index: 1000;
 	width: 100%;
+	background: var(--bg-header);
+	backdrop-filter: blur(12px);
 	transition: (display, backdrop-filter) 0.3s ease 0s;
 	user-select: none;
 
-	&_postScroll {
-		background: var(--bg-header);
-		backdrop-filter: blur(12px);
+	@media screen and (min-width: 1024px) {
+		background: transparent;
+		backdrop-filter: none;
 	}
 
-	@media screen and (max-width: 768px) {
+	// Has to be in this position for the filter to work
+	&.postScroll {
 		background: var(--bg-header);
 		backdrop-filter: blur(12px);
 	}
@@ -26,6 +29,7 @@
 	top: 0px;
 	left: 0px;
 	display: flex;
+	position: relative;
 	z-index: 1100;
 	justify-content: space-between;
 	align-items: center;
@@ -71,7 +75,7 @@
 	margin-left: 21px;
 	margin-top: 5px;
 
-	&_forceEnable {
+	&.enabled {
 		display: flex;
 	}
 
@@ -92,7 +96,7 @@
 	transition: transform 0.3s ease 0s;
 	pointer-events: none;
 
-	&_selected {
+	&.selected {
 		transform: rotate(-180deg);
 	}
 }
@@ -135,7 +139,7 @@
 		}
 	}
 
-	&_enabled {
+	&.enabled {
 		display: block;
 	}
 }
@@ -159,7 +163,7 @@
 	transition: (font, background-color) 0.3s ease 0s;
 	display: none;
 
-	&_postScroll {
+	&.postScroll {
 		color: var(--text-white);
 		background-color: var(--btn-primary);
 
@@ -177,7 +181,7 @@
 	}
 }
 
-.header__navButton {
+.header__modalButton {
 	display: block;
 	height: 24px;
 	width: 24px;
@@ -186,28 +190,19 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
+	cursor: pointer;
 
-	&_activated {
+	&.activated {
 		height: 20px;
 		width: 20px;
 		margin-right: 6px;
 		background-image: url('/public/icons/menuCross.svg');
+		background-color: #ffffff; // Somehow doesn't change automatically when modal window is called...
 	}
 
 	@media screen and (min-width: 1024px) {
 		display: none;
 	}
-}
-
-.header__mobileModal {
-	display: none;
-}
-
-.header__tabs {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	position: relative;
 }
 
 .header__tab {
@@ -219,18 +214,160 @@
 		color: var(--text-primary);
 	}
 
-	&_selected {
+	&.selected {
 		color: var(--text-primary);
 	}
 }
 
-.header__tabs > li {
-	display: block;
-	margin: 0 auto;
-	padding: 0;
-	margin-right: 72px;
+.header__tabs {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 
-	&:last-child {
-		margin-right: 0px;
+	& > li {
+		@extend .header__tab;
+		display: block;
+		margin: 0 auto;
+		padding: 0;
+		margin-right: 72px;
+
+		&:last-child {
+			margin-right: 0px;
+		}
+	}
+}
+
+.header__mobileModal {
+	display: none;
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	z-index: 1050; // Between header and header-container
+	background-color: #ffffff;
+	top: 0;
+	left: 0;
+
+	&.enabled {
+		display: block;
+	}
+
+	@media screen and (min-width: 1024px) {
+		display: none;
+
+		&.enabled {
+			display: none;
+		}
+	}
+}
+
+.mobileModal__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.mobileModal__tabs {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	& > li {
+		@extend %font__button_modalTabs;
+		@extend .header__tab;
+		margin: 24px auto;
+		font-size: 18px;
+		line-height: normal;
+
+		&:first-child {
+			margin-top: 0px;
+		}
+
+		&:last-child {
+			margin-bottom: 0px;
+		}
+
+		&.selected {
+			@extend %font__button_modalTabs;
+			@extend .header__tab, .selected;
+			font-size: 18px;
+			line-height: normal;
+		}
+
+		@media screen and (min-width: 768px) {
+			font-size: 20px;
+			line-height: 26.646px;
+
+			&.selected {
+				font-size: 20px;
+				line-height: 26.646px;
+			}
+		}
+	}
+}
+
+.mobileModal__blankSpace {
+	display: block;
+	height: 0px;
+	width: 0px;
+
+	&_bottom {
+		display: block;
+		height: 0px;
+		width: 0px;
+
+		@media screen and (min-width: 768px) {
+			display: none;
+		}
+	}
+}
+
+.mobileModal__bottom {
+	display: none;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	margin-bottom: 12px;
+
+	@media screen and (min-width: 768px) {
+		display: flex;
+	}
+}
+
+.mobileModal__button {
+	@extend .button_red;
+}
+
+.mobileModal__links {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 354px;
+	margin-top: 34px;
+}
+
+.links__smallLinks {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 80px;
+
+	& > img {
+		height: 32px;
+		width: 20px;
+	}
+}
+
+.links__bigLinks {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 242px;
+
+	& > img {
+		height: 32px;
+		width: 20px;
 	}
 }

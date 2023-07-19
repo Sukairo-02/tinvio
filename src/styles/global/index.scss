@@ -42,7 +42,7 @@ html {
 .button_red {
 	@extend %font__button_main;
 	color: var(--text-white);
-	padding: 14px 0px;
+	padding: 13px 0px 15px 0px;
 	border-radius: 16px;
 	background-color: var(--btn-primary);
 	flex-shrink: 0;
