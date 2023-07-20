@@ -46,3 +46,9 @@ modalButton?.addEventListener('click', () => {
 	modalWindow?.classList.toggle('enabled')
 	langSelector.wrapper?.classList.toggle('enabled')
 })
+
+const logoWrapper = document.getElementById('header__logoWrapper')
+
+logoWrapper?.addEventListener('click', () => {
+	window.scroll(0, 0)
+})
