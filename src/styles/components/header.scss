@@ -182,23 +182,38 @@
 }
 
 .header__modalButton {
-	display: block;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
 	height: 20px;
 	width: 24px;
 	margin-right: 6px;
-	background-image: url('/public/icons/menuBurger.svg');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
 	background-color: rgba(255, 255, 255, 0);
 	cursor: pointer;
 
-	&.activated {
-		height: 20px;
+	& > span {
+		display: block;
+		height: 3px;
 		width: 24px;
-		margin-right: 6px;
-		background-image: url('/public/icons/menuCross.svg');
-		background-color: rgba(255, 255, 255, 0); // Somehow doesn't change automatically when modal window is called...
+		border-radius: 1.5px;
+		background: var(--text-secondary);
+
+		transition: transform 0.3s ease 0s;
+	}
+
+	&.activated > span {
+		&:first-child {
+			transform: rotate(45deg) translate(6px, 6px);
+		}
+
+		&:nth-child(2) {
+			transform: rotateY(90deg);
+		}
+
+		&:last-child {
+			transform: rotate(-45deg) translate(6px, -6px);
+		}
 	}
 
 	@media screen and (min-width: 1024px) {
@@ -262,6 +277,8 @@
 }
 
 .mobileModal__container {
+	position: relative;
+	z-index: 1075;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -370,5 +387,80 @@
 	& > img {
 		height: 32px;
 		width: 20px;
+	}
+}
+
+.mobileModal__background {
+	position: relative;
+	z-index: 1060;
+
+	& > * {
+		position: absolute;
+	}
+
+	& > .square_top {
+		top: -29px;
+		right: -131px;
+		width: 256.084px;
+		height: 256.084px;
+		transform: rotate(-45deg);
+		border-radius: 44.887px;
+		background: var(--radial-grey-15per);
+	}
+
+	& > .square_bottom {
+		left: -100px;
+		top: calc(100vh - 27px - 238.754px);
+		width: 238.754px;
+		height: 238.754px;
+		transform: rotate(-45deg);
+		border-radius: 22.224px;
+		background: var(--radial-grey-15per);
+	}
+
+	& > .dots_left {
+		display: none;
+	}
+
+	& > .dots_right {
+		top: calc(100vh - 30px - 187.288px);
+		right: -90px;
+		width: 247.491px;
+		height: 187.288px;
+	}
+
+	@media screen and (min-width: 768px) {
+		& > .square_top {
+			top: -128px;
+			right: -332px;
+			width: 537.109px;
+			height: 537.109px;
+			border-radius: 94.145px;
+			background: var(--radial-grey-15per);
+		}
+
+		& > .square_bottom {
+			left: -212px;
+			top: calc(100vh - 39px - 456.268px);
+			width: 456.268px;
+			height: 456.268px;
+			border-radius: 42.471px;
+			background: var(--radial-grey-15per);
+		}
+
+		& > .dots_left {
+			display: block;
+			left: -61px;
+			top: calc(100vh - 36px - 237.84px);
+			width: 313.228px;
+			height: 237.034px;
+		}
+
+		& > .dots_right {
+			top: calc(100vh - 97px - 288.371px);
+			right: -105px;
+			width: 381.065px;
+			height: 288.371px;
+		}
 	}
 }
