@@ -2,8 +2,33 @@
 @import '@styles/components/header.scss';
 
 main {
-	padding-top: 91px;
+	padding-top: 86px;
 	height: 2000px;
+
+	@media screen and (min-width: 1024px) {
+		padding-top: 88px;
+	}
+
+	@media screen and (min-width: 1920px) {
+		padding-top: 96px;
+	}
+}
+
+.body__sectionOne {
+	margin-top: 160px;
+
+	& > h1 {
+		& > .text_red {
+			color: var(--text-primary);
+			font-weight: 700;
+		}
+	}
+}
+
+.sectionOne__buttonContainer {
+	& > button {
+		@extend .button_red;
+	}
 }
 
 footer {

@@ -24,17 +24,14 @@ window.addEventListener('click', (event) => {
 
 const header = document.querySelector('.header')
 const headerButton = document.querySelector('.header__button')
-const bodyWrapper = document.querySelector('.body__wrapper')
 
 document.addEventListener('scroll', () => {
-	if (bodyWrapper) {
-		if (window.scrollY == 0) {
-			header?.classList.remove('postScroll')
-			headerButton?.classList.remove('postScroll')
-		} else {
-			header?.classList.add('postScroll')
-			headerButton?.classList.add('postScroll')
-		}
+	if (window.scrollY == 0) {
+		header?.classList.remove('postScroll')
+		headerButton?.classList.remove('postScroll')
+	} else {
+		header?.classList.add('postScroll')
+		headerButton?.classList.add('postScroll')
 	}
 })
 
