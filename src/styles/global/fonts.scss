@@ -158,6 +158,15 @@
 	line-height: 17px;
 }
 
+%font__underButton {
+	color: var(--text-secondary);
+	font-family: Gilroy;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
 %font__text_body1 {
 	color: var(--text-main);
 	font-family: Inter;

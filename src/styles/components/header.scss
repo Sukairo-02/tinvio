@@ -173,11 +173,16 @@
 
 .header__center {
 	padding-right: 40px;
+	height: 15px;
 	display: none;
 	justify-content: center;
 
 	@media screen and (min-width: 1024px) {
 		display: flex;
+	}
+
+	@media screen and (min-width: 1280px) {
+		height: 20px;
 	}
 }
 

@@ -34,7 +34,7 @@ h1 {
 
 	@media screen and (min-width: 1024px) {
 		font-size: 36px;
-		line-height: 44px;
+		line-height: 49px;
 	}
 
 	@media screen and (min-width: 1280px) {
@@ -105,7 +105,8 @@ li {
 .button_red {
 	@extend %font__button_main;
 	color: var(--text-white);
-	padding: 13px auto 15px auto;
+	padding-bottom: 2px;
+	padding-left: 2px;
 	border-radius: 16px;
 	background-color: var(--btn-primary);
 	flex-shrink: 0;
@@ -134,7 +135,6 @@ li {
 
 .button_white {
 	@extend %font__button_headerButton;
-	padding: 10px auto;
 	padding-left: 2px;
 	border-radius: 16px;
 	background-color: var(--btn-secondary);
