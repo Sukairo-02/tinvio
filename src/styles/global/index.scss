@@ -16,6 +16,7 @@ body {
 	@extend %font__text_body1;
 	color: var(--text-secondary);
 	background-color: #ffffff;
+	overflow-x: hidden;
 }
 
 html {

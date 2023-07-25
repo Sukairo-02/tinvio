@@ -8,17 +8,11 @@
 	padding: 24px 0px;
 	z-index: 1000;
 	width: 100%;
-	background: var(--bg-header);
-	backdrop-filter: blur(12px);
+	background: transparent;
+	backdrop-filter: none;
 	transition: (display, backdrop-filter) 0.3s ease 0s;
 	user-select: none;
 
-	@media screen and (min-width: 1024px) {
-		background: transparent;
-		backdrop-filter: none;
-	}
-
-	// Has to be in this position for the filter to work
 	&.postScroll {
 		background: var(--bg-header);
 		backdrop-filter: blur(12px);
