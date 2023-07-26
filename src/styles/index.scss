@@ -17,24 +17,17 @@ main {
 	}
 }
 
-.body__sectionOne {
-	margin-top: 52px;
+section {
 	margin-left: 15px;
 	margin-right: 15px;
-
-	@media screen and (min-width: 768px) {
-		margin-top: 38px;
-	}
 
 	@media screen and (min-width: 1024px) {
 		margin-left: auto;
 		margin-right: auto;
-		margin-top: 166px;
 		max-width: 944px;
 	}
 
 	@media screen and (min-width: 1280px) {
-		margin-top: 160px;
 		max-width: 1032px;
 	}
 
@@ -44,7 +37,22 @@ main {
 
 	@media screen and (min-width: 1920px) {
 		max-width: 1312px;
-		height: 48px;
+	}
+}
+
+.body__sectionOne {
+	margin-top: 52px;
+
+	@media screen and (min-width: 768px) {
+		margin-top: 38px;
+	}
+
+	@media screen and (min-width: 1024px) {
+		margin-top: 166px;
+	}
+
+	@media screen and (min-width: 1280px) {
+		margin-top: 160px;
 	}
 }
 
@@ -495,15 +503,19 @@ main {
 	}
 
 	@media screen and (min-width: 1920px) {
-		transform: translate(-9px, 270px);
-
 		& > .square_top {
-			transform: rotate(45deg) translate(-571px, -470px);
+			transform: rotate(45deg) translate(-587px, -474px);
+		}
+
+		& > .square_left {
+			transform: rotate(45deg) translate(-656.5px, 404px);
 		}
 
 		& > .square_red {
 			width: 1049.93px;
 			height: 1031.82px;
+
+			transform: rotate(45deg) translate(-401px, -505.5px);
 
 			& > .inner {
 				transform: translate(-10px, 0px);
