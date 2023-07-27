@@ -408,9 +408,9 @@
 	align-items: center;
 	width: 80px;
 
-	& > img {
+	& a > img {
 		height: 32px;
-		width: 20px;
+		width: 32px;
 	}
 }
 
@@ -420,9 +420,9 @@
 	align-items: center;
 	width: 242px;
 
-	& > img {
-		height: 32px;
-		width: 20px;
+	& > a > img {
+		height: 40px;
+		width: 113px;
 	}
 }
 
