@@ -80,7 +80,7 @@ section {
 			content: '';
 			display: block;
 			position: absolute;
-			background-image: url(/images/sectionOne_starsHigh.png);
+			background-image: url(/images/sectionOne_starsHigh.webp);
 			width: 86.71px;
 			height: 79.82px;
 			margin-left: -33px;
@@ -106,7 +106,7 @@ section {
 			}
 
 			&::before {
-				background-image: url(/images/sectionOne_starsHigh.png);
+				background-image: url(/images/sectionOne_starsHigh.webp);
 				width: 86.71px;
 				height: 79.82px;
 				margin-left: -33px;
@@ -130,7 +130,7 @@ section {
 		& > h1 {
 			width: auto;
 			&::before {
-				background-image: url(/images/sectionOne_starsThin.png);
+				background-image: url(/images/sectionOne_starsThin.webp);
 				width: 75px;
 				height: 30px;
 				margin-top: -27px;
@@ -149,7 +149,7 @@ section {
 		height: 303px;
 
 		& > h1::before {
-			background-image: url(/images/sectionOne_starsHigh.png);
+			background-image: url(/images/sectionOne_starsHigh.webp);
 			width: 86.71px;
 			height: 79.82px;
 			margin-left: -48px;
@@ -290,7 +290,7 @@ section {
 				max-height: none;
 				object-fit: contain;
 				image-rendering: optimizeQuality;
-				content: url(/images/sectionOne_screens_375.png);
+				content: url(/images/sectionOne_screens_375.webp);
 				width: 613.16px;
 				height: 417px;
 
@@ -376,7 +376,7 @@ section {
 				}
 
 				& > .screens {
-					content: url(/images/sectionOne_screens_768.png);
+					content: url(/images/sectionOne_screens_768.webp);
 					width: 1052.39px;
 					height: 723px;
 					transform: rotate(-45deg) translate(783px, -571px);
