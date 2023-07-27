@@ -3,7 +3,7 @@
 
 main {
 	padding-top: 86px;
-	height: 2000px;
+	height: 3000px;
 	position: relative;
 	z-index: 1;
 	overflow: hidden;
@@ -216,6 +216,7 @@ section {
 	z-index: -10;
 	position: relative;
 	pointer-events: none;
+	user-select: none;
 
 	& > * {
 		position: absolute;
@@ -529,7 +530,7 @@ section {
 	transform: translate(-7px, 0px);
 
 	@media screen and (min-width: 768px) {
-		margin-top: 484px;
+		margin-top: 781px;
 		transform: none;
 	}
 
@@ -541,7 +542,7 @@ section {
 		margin-top: 446px;
 	}
 
-	@media screen and (min-width: 1440px) {
+	@media screen and (min-width: 1920px) {
 		margin-top: 414px;
 	}
 }
@@ -675,6 +676,200 @@ section {
 				width: 12px;
 				height: 14px;
 			}
+		}
+	}
+}
+
+.sectionTwo__background {
+	z-index: -4;
+	position: relative;
+	pointer-events: none;
+	user-select: none;
+	height: 766.96px;
+	margin-left: 0;
+	border-radius: 40px 0px 0px 50px;
+	background: var(--bg-grey);
+	transform: skewY(-8deg) translate(0px, -312px);
+
+	& > * {
+		position: absolute;
+	}
+
+	& > .dots_left {
+		top: 0;
+		right: 50%;
+
+		width: 199.21px;
+		height: 150.75px;
+
+		transform: skewY(8deg) translate(-78px, 373px);
+	}
+
+	& > .dots_right {
+		top: 0;
+		left: 50%;
+
+		width: 298.65px;
+		height: 226px;
+
+		transform: skewY(8deg) translate(49px, 614px);
+	}
+
+	& > .sectionImage {
+		top: 0;
+		left: 50%;
+
+		width: 357px;
+
+		object-fit: contain;
+		image-rendering: optimizeQuality;
+
+		transform: skewY(8deg) translate(-184px, 384px);
+	}
+
+	& > .square {
+		top: 0;
+		left: 50%;
+
+		width: 408.54px;
+		height: 408.54px;
+		border-radius: 64px;
+
+		background: radial-gradient(
+			95.84% 95.84% at 50% 50%,
+			rgba(255, 255, 255, 0.2) 0%,
+			rgba(250, 250, 250, 0.2) 100%
+		);
+
+		transform: skewY(8deg) rotate(45deg) translate(116px, 42px);
+	}
+
+	@media screen and (min-width: 768px) {
+		border-radius: 54px 0px 0px 50px;
+		height: 956.1px;
+		transform: skewY(-8deg) translate(0px, -294px);
+
+		& > .dots_left {
+			width: 297px;
+			height: 224.75px;
+
+			transform: skewY(8deg) translate(-172px, 243px);
+		}
+
+		& > .dots_right {
+			width: 298.65px;
+			height: 226px;
+
+			transform: skewY(8deg) translate(215px, 700px);
+		}
+
+		& > .sectionImage {
+			width: 535px;
+
+			transform: skewY(8deg) translate(-258px, 386px);
+		}
+
+		& > .square {
+			transform: skewY(8deg) rotate(45deg) translate(148px, -152px);
+		}
+	}
+
+	@media screen and (min-width: 1024px) {
+		border-radius: 62px 0px 0px 80px;
+		height: 662.49px;
+		transform: skewY(-8deg) translate(0px, -415px);
+
+		& > .dots_left {
+			width: 297px;
+			height: 224.75px;
+
+			transform: skewY(8deg) translate(-286px, 556px);
+		}
+
+		& > .dots_right {
+			width: 253.72px;
+			height: 192px;
+
+			transform: skewY(8deg) translate(358px, 433px);
+		}
+
+		& > .sectionImage {
+			content: url(/images/sectionTwo_image.svg);
+			width: 535px;
+
+			transform: skewY(8deg) translate(-470px, 167px);
+		}
+
+		& > .square {
+			width: 496.7px;
+			height: 496.7px;
+			border-radius: 78px;
+
+			transform: skewY(8deg) rotate(45deg) translate(242px, -238px);
+		}
+	}
+
+	@media screen and (min-width: 1280px) {
+		transform: skewY(-8deg) translate(0px, -405px);
+		margin-left: 55px;
+
+		& > .dots_left {
+			transform: skewY(8deg) translate(-371px, 569px);
+		}
+
+		& > .dots_right {
+			transform: skewY(8deg) translate(439px, 445px);
+		}
+
+		& > .sectionImage {
+			width: 574px;
+
+			transform: skewY(8deg) translate(-623px, 165px);
+		}
+
+		& > .square {
+			transform: skewY(8deg) rotate(45deg) translate(291px, -277px);
+		}
+	}
+
+	@media screen and (min-width: 1440px) {
+		transform: skewY(-8deg) translate(0px, -405px);
+		margin-left: 55px;
+
+		& > .dots_left {
+			transform: skewY(8deg) translate(-371px, 569px);
+		}
+
+		& > .dots_right {
+			transform: skewY(8deg) translate(439px, 445px);
+		}
+
+		& > .sectionImage {
+			transform: skewY(8deg) translate(-623px, 165px);
+		}
+
+		& > .square {
+			transform: skewY(8deg) rotate(45deg) translate(294px, -275px);
+		}
+	}
+
+	@media screen and (min-width: 1920px) {
+		transform: skewY(-8deg) translate(0px, -428px);
+
+		& > .dots_left {
+			transform: skewY(8deg) translate(-370px, 602px);
+		}
+
+		& > .dots_right {
+			transform: skewY(8deg) translate(440px, 480px);
+		}
+
+		& > .sectionImage {
+			transform: skewY(8deg) translate(-682px, 177px);
+		}
+
+		& > .square {
+			transform: skewY(8deg) rotate(45deg) translate(322px, -248px);
 		}
 	}
 }
