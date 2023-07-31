@@ -88,7 +88,8 @@ li {
 .body__tab {
 	@extend %font__text_tabs;
 	display: flex;
-	padding: 11px 34px 12px 34px;
+	padding: 11px 24px 12px 24px;
+	height: 40px;
 	border-radius: 8px;
 	background: var(--input);
 	align-items: center;
@@ -96,9 +97,20 @@ li {
 	flex-shrink: 0;
 	cursor: pointer;
 
-	&_selected {
-		border-radius: 8px;
+	&:hover {
+		background-color: var(--btn-secondary-alternative);
+	}
+
+	&:active {
+		background-color: var(--btn-secondary-alternative);
+	}
+
+	&.selected {
 		border: 1px solid var(--buttons-text-button-2, var(--btn-two));
+	}
+
+	@media screen and (min-width: 768px) {
+		padding: 11px 34px 12px 34px;
 	}
 }
 
