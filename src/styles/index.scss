@@ -999,7 +999,7 @@ section {
 		margin-left: 14px;
 
 		& > li {
-			list-style-image: url(/public/icons/list_marker.svg);
+			list-style-image: url(/icons/list_marker.svg);
 			margin-top: 8px;
 			padding-left: 7px;
 
@@ -1103,10 +1103,93 @@ section {
 
 .sectionThree__background {
 	position: relative;
-	z-index: -4;
-	display: none;
+	z-index: -10;
+	position: relative;
+	pointer-events: none;
+	user-select: none;
 
 	& > * {
 		position: absolute;
+	}
+
+	& > .greySquare {
+		background: var(--radial-grey-15per);
+
+		top: 0;
+		right: 50%;
+
+		width: 375.79px;
+		height: 375.79px;
+		border-radius: 22px;
+
+		transform: rotate(45deg) translate(-247px, -138px);
+	}
+
+	& > .dots {
+		top: 0;
+		left: 50%;
+
+		width: 215.35px;
+		height: 162.97px;
+
+		transform: translate(68px, -78px);
+	}
+
+	& > .redSquare {
+		top: 0;
+		left: 50%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: var(--diamond-visual-60per);
+
+		width: 451.13px;
+		height: 451.13px;
+		border-radius: 58px;
+
+		transform: rotate(45deg) translate(-52px, 267px);
+
+		& > .inner {
+			background: var(--diamond-visual);
+
+			width: 395.02px;
+			height: 395.02px;
+			border-radius: 50px;
+
+			&::before {
+				content: url(/images/sectionThree_stars.svg);
+				position: absolute;
+
+				height: 130px;
+
+				transform: rotate(-45deg) scale(0.78) translate(-194px, -149px) rotate(8deg);
+			}
+
+			& > .dots {
+				width: 277.55px;
+				height: 210.04px;
+
+				transform: rotate(-45deg) translate(62px, -18px);
+			}
+
+			& > .left_image {
+				object-fit: contain;
+				image-rendering: optimizeQuality;
+
+				height: 386px;
+
+				transform: rotate(-45deg) scale(1.03) translate(102px, -126px);
+			}
+
+			& > .right_image {
+				object-fit: contain;
+				image-rendering: optimizeQuality;
+
+				height: 386px;
+
+				transform: rotate(-45deg) scale(1.03) translate(565px, -299px);
+			}
+		}
 	}
 }
