@@ -96,6 +96,7 @@ li {
 	justify-content: center;
 	flex-shrink: 0;
 	transition: font, color, background-color 0.3s ease 0s;
+	user-select: none;
 	cursor: pointer;
 
 	&:hover {
@@ -127,6 +128,7 @@ li {
 	height: 48px;
 	text-align: center;
 	transition: font, color, background-color 0.3s ease 0s;
+	user-select: none;
 	cursor: pointer;
 
 	&:hover {
@@ -157,6 +159,7 @@ li {
 	min-height: 40px;
 	text-align: center;
 	transition: font, color, background-color 0.3s ease 0s;
+	user-select: none;
 	cursor: pointer;
 
 	&:hover {
