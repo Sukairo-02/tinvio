@@ -1548,3 +1548,60 @@ section {
 		}
 	}
 }
+
+.sectionFour__background {
+	z-index: -4;
+	position: relative;
+	pointer-events: none;
+	user-select: none;
+	overflow: hidden;
+	background: radial-gradient(188.97% 141.01% at 50% 50%, #f7f7f7 0%, #fafafa 100%);
+
+	top: 0;
+	right: 0;
+
+	background: red;
+
+	height: 450px;
+	border-radius: 0 40px 40px 0;
+
+	transform: translate(0px, -402px);
+
+	& > * {
+		position: absolute;
+	}
+
+	& > .dots {
+		left: 50%;
+		width: 270.57px;
+		height: 204.75px;
+
+		transform: translate(86px, -96px);
+	}
+
+	& > .square_left {
+		background: var(--radial-grey-20per);
+		right: 50%;
+
+		width: 505.89px;
+		height: 505.89px;
+		border-radius: 95px;
+
+		transform: rotate(45deg) translate(-116px, -8px);
+	}
+
+	& > .square_right {
+		background: radial-gradient(95.84% 95.84% at 50% 50%, #fff 0%, #fafafa 100%);
+		opacity: 0.5;
+		left: 50%;
+
+		width: 505.89px;
+		height: 505.89px;
+		border-radius: 95px;
+
+		transform: rotate(45deg) translate(166px, -28px);
+	}
+
+	@media screen and (min-width: 768px) {
+	}
+}
