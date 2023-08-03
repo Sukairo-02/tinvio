@@ -1181,6 +1181,10 @@ section {
 				height: 386px;
 
 				transform: rotate(-45deg) scale(1.03) translate(102px, -126px);
+
+				&.selected {
+					display: block;
+				}
 			}
 
 			& > .right_image {
@@ -1190,6 +1194,10 @@ section {
 				height: 386px;
 
 				transform: rotate(-45deg) scale(1.03) translate(565px, -299px);
+
+				&.selected {
+					display: block;
+				}
 			}
 		}
 	}
@@ -1560,8 +1568,6 @@ section {
 	top: 0;
 	right: 0;
 
-	background: red;
-
 	height: 450px;
 	border-radius: 0 40px 40px 0;
 
@@ -1603,5 +1609,69 @@ section {
 	}
 
 	@media screen and (min-width: 768px) {
+		height: 294px;
+
+		transform: translate(0px, -245px);
+
+		& > .dots {
+			transform: translate(206px, -96px);
+		}
+
+		& > .square_left {
+			transform: rotate(45deg) translate(-132px, 6px);
+		}
+
+		& > .square_right {
+			transform: rotate(45deg) translate(86px, -389px);
+		}
+	}
+
+	@media screen and (min-width: 1024px) {
+		height: 228px;
+
+		right: 1px;
+
+		transform: translate(0px, -179px);
+
+		& > .dots {
+			width: 426.5px;
+			height: 322.75px;
+
+			transform: translate(170px, -224px);
+		}
+
+		& > .square_left {
+			transform: rotate(45deg) translate(-182px, 60px);
+		}
+
+		& > .square_right {
+			transform: rotate(45deg) translate(66px, -452px);
+		}
+	}
+
+	@media screen and (min-width: 1280px) {
+		right: 54px;
+
+		& > .dots {
+			transform: translate(204px, -224px);
+		}
+
+		& > .square_left {
+			transform: rotate(45deg) translate(-160px, 38px);
+		}
+
+		& > .square_right {
+			transform: rotate(45deg) translate(84px, -478px);
+		}
+	}
+
+	@media screen and (min-width: 1440px) {
+		transform: translate(0px, -180px);
+	}
+
+	@media screen and (min-width: 1920px) {
+		height: 244px;
+
+		transform: translate(0px, -195px);
 	}
 }
